@@ -1,23 +1,162 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <title>Demo Webpack</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1,
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,
             shrink-to-fit=no">
-</head>
+        <!-- Bootstrap call on index.js -->
+        <!-- Owl Carousel call on index.js-->
+        <link rel="stylesheet"
+            href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+        <!-- Animate Css -->
+        <link rel="stylesheet"
+            href="../../node_modules/animate.css/animate.min.css">
+    </head>
 
-<body>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <nav class="navbar navbar-expand-md">
+                <!-- logo -->
+                <div class="logo">
+                    <img src="../assets/img/logo.png" alt="">
+                    <a class="navbar-brand ml-2" href="#">
+                        <h3 class="intro__heading"> My Class </h3></a>
+                </div>
+                <button class="navbar-toggler" type="button"
+                    data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon1">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                    <span class="navbar-toggler-icon2">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#block_slider">Home<span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#block_a">Course</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#block_b">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#"
+                                id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Login MyClass
+                            </a>
+                            <div class="dropdown-menu mb-2 px-2"
+                                aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item btn_btnLogin" href="#">Log
+                                    In</a>
+                                <a class="dropdown-item btn_btnSignin mt-2"
+                                    href="#">
+                                    Sign In</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- phone -->
+                    <div class="phone_contact">
+                        <div class="phone_contact_overlay">
+                            <i class="fas fa-phone-volume"></i>
+                            <span>+84 3666 18 162</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- =========-->
+        <!-- Home Page-->
+        <!-- //////// -->
+
+        <!-- Slider -->
+        <section class="slider_home" id="block_slider">
+            <!-- Hero Slider -->
+            <div class="hero_slider_container">
+                <div class="hero_slider owl-carousel">
+
+                    <!-- Hero Slide -->
+                    <div class="hero_slide">
+                        <div class="hero_slide_background">
+                            <img src="../assets/img/slider_background.jpg"
+                                alt="">
+                        </div>
+                        <div class="hero_slide_container d-flex flex-column
+                            align-items-center justify-content-center">
+                            <div class="hero_slide_content text-center">
+                                <h1 data-animation-in="fadeInUp"
+                                    data-animation-out="animate-out fadeOut">Get
+                                    your <span>Education</span> today!</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Slide -->
+                    <div class="hero_slide">
+                        <div class="hero_slide_background">
+                            <img src="../assets/img/cover.jpg"
+                                alt="">
+                        </div>
+                        <div class="hero_slide_container d-flex flex-column
+                            align-items-center justify-content-center">
+                            <div class="hero_slide_content text-center">
+                                <h1 data-animation-in="fadeInUp"
+                                    data-animation-out="animate-out fadeOut">Get
+                                    your <span>Education</span> today!</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Slide -->
+                    <div class="hero_slide">
+                        <div class="hero_slide_background">
+                            <img class="course3"
+                                src="../assets/img/usf-group-study.jpg" alt="">
+                            <div class="cu">
+
+                            </div>
+
+                        </div>
+                        <div class="hero_slide_container d-flex flex-column
+                            align-items-center justify-content-center">
+                            <div class="hero_slide_content text-center">
+                                <h1 data-animation-in="fadeInUp"
+                                    data-animation-out="animate-out fadeOut">Get
+                                    your <span>Education</span> today!</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="hero_slider_left hero_slider_nav trans_200"><span
+                        class="trans_200">prev</span></div>
+                <div class="hero_slider_right hero_slider_nav trans_200"><span
+                        class="trans_200">next</span></div>
+            </div>
+        </section>
 
 
-
-    <h1>Trang chủ</h1>
-    <div id="div-bg"></div>
-
-
-    <script src="../../dist/js/index.js"></script>
-</body>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="../../node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="../../node_modules/popper.js/dist/popper.min.js"></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- ///// -->
+        <script src="../../dist/js/index.js"></script>
+    </body>
 
 </html>

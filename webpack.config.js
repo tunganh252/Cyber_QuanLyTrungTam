@@ -6,10 +6,11 @@ module.exports = {
     ///////////////////////
     /** Đóng gói file JS */
     ///////////////////////
-    entry: {
+    entry:{
         index: './src/controllers/index.js',
-        admin: './src/models/nhan-vien.js'
-    }, /// File đầu vào 
+        concu: './src/controllers/concu.js',
+    },
+    /// File đầu vào 
     output: {
         path: path.resolve(__dirname, 'dist'), /// Thư mục chứa file đầu ra
         filename: 'js/[name].js' // Tên file đầu ra
@@ -39,7 +40,7 @@ module.exports = {
                 use: {
                     loader: "file-loader",
                     options: {
-                        name: "[name].[ext]", /// đặt tên đúng khi đóng gói
+                        name: "[path][name].[ext]", /// đặt tên đúng khi đóng gói
                         outputPath: "images", /// Đặt tên thư mục nằm trong folder đóng gói
                         publicPath: "/dist/images/", /// Đặt lại đường dẫn file hình trong file đã duoc đóng gói 
                         limit: 10000, /// Giới hạn dung lượng file ảnh

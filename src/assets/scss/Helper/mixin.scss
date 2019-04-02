@@ -1,0 +1,53 @@
+/** 
+* Responsive
+*/
+// 576px: phone
+// 768px: table-port
+// 992px: table-land
+// 1200px: desktop
+
+@mixin media-breakpoint ($breakpoint) {
+    @if $breakpoint==up-sm {
+        @media screen and(min-width: 576px) {
+            @content;
+        }
+    }
+    @if $breakpoint==down-sm {
+        @media screen and(max-width: 576px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==up-md {
+        @media screen and(min-width: 768px) {
+            @content;
+        }
+    }
+    @if $breakpoint==down-md {
+        @media screen and(max-width: 768px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==up-lg {
+        @media screen and(min-width: 992px) {
+            @content;
+        }
+    }
+    @if $breakpoint==down-lg {
+        @media screen and(max-width: 992px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==up-xl {
+        @media screen and(min-width: 1200px) {
+            @content;
+        }
+    }
+    @if $breakpoint==down-xl {
+        @media screen and(max-width: 1200px) {
+            @content;
+        }
+    }
+}

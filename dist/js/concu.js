@@ -81,27 +81,22 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/models/nhan-vien.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/controllers/concu.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/models/nhan-vien.js":
-/*!*********************************!*\
-  !*** ./src/models/nhan-vien.js ***!
-  \*********************************/
-/*! exports provided: NhanVien */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/controllers/concu.js":
+/*!**********************************!*\
+  !*** ./src/controllers/concu.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NhanVien", function() { return NhanVien; });
-function NhanVien(ten, tuoi) {
-    this.ten = ten;
-    this.tuoi = tuoi;
-}
+
+
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=admin.js.map
+//# sourceMappingURL=concu.js.map
