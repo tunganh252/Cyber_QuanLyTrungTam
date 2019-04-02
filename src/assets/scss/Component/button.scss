@@ -2,9 +2,53 @@
     display: inline-block;
     background-color: $bg-color;
     border: 2px solid transparent;
-    border-radius: 5px;
     color: $color;
     transition: 0.3s all;
     font-size: 1.3rem;
     text-align: center;
+}
+
+
+@mixin btn_more {
+    .main-button {
+        position: relative;
+        display: inline-block;
+        padding: 10px 30px;
+        background-color: #FF6700;
+        border: 2px solid transparent;
+        border-radius: 40px;
+        color: #FFF;
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all;
+    }
+
+    .main-button:hover,
+    .main-button:focus {
+        text-decoration: none;
+        background-color: #fff;
+        border: 2px solid #FF6700;
+        color: #FF6700;
+        transition: .2s all;
+
+    }
+
+    .icon-button {
+        transition: .2s all;
+
+        .icon_arrow {
+            display: none;
+            transition: .2s all;
+        }
+    }
+
+    .main-button.icon-button:hover,
+    .main-button.icon-button:focus {
+        transition: .2s all;
+
+        .icon_arrow {
+            transition: .2s all;
+            display: inline-block;
+            margin-left: .5rem;
+        }
+    }
 }

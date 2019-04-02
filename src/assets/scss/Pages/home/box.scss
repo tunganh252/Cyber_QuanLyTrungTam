@@ -1,0 +1,80 @@
+.hero_boxes {
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    padding-top: 0px;
+}
+
+.hero_box {
+    width: 100%;
+    height: 161px;
+    background: #1a1a1a;
+    padding-left: 50px;
+    cursor: pointer;
+}
+
+.hero_box:hover {
+    // background: #ffb606;
+    background: #3b5998;
+}
+
+.hero_box img {
+    width: 62px;
+    height: auto;
+    margin-top: -6px;
+}
+
+.svg path {
+    // fill: #ffb606;
+    fill: red;
+}
+
+.hero_box svg {
+    width: 62px;
+    height: auto;
+}
+
+.hero_box:hover svg path {
+    fill: #FFFFFF;
+}
+
+.hero_box_content {
+    padding-left: 13px;
+    padding-top: 11px;
+    margin-top: -6px;
+}
+
+.hero_box_title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-bottom: 7px;
+}
+
+.hero_box_link {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-left: 3px;
+}
+
+.hero_box_link:hover {
+    color: #1a1a1a;
+}
+
+@include media-breakpoint(up-lg) {
+    .hero_boxes {
+        .hero_boxes_inner {
+            position: absolute;
+            bottom: -15%;
+            left: 0;
+            width: 100%;
+            z-index: 99;
+        }
+
+        .hero_box {
+            height: 180px;
+        }
+    }
+}

@@ -1,3 +1,4 @@
+import '../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css';
 // Style CSS-SCSS
 import '../assets/css/style.css';
 import '../assets/scss/style.scss';
@@ -46,10 +47,20 @@ function initHeroSlider() {
             items: 1,
             loop: true,
             smartSpeed: 2000,
-            autoplay: true,
+            autoplay: false,
             nav: false,
-            dots: false
+            dots: false,
+            autoplaySpeed: 5000,
+            responsive: {
+                0: {
+                    dots: true
+                },
+                576: {
+                    dots: false
+                }
+            }
         });
+
 
         // add animate.css class(es) to the elements to be animated
         function setAnimation(_elem, _InOut) {

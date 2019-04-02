@@ -9,21 +9,28 @@
             shrink-to-fit=no">
         <!-- Bootstrap call on index.js -->
         <!-- Owl Carousel call on index.js-->
+        <!-- Font Awesome -->
         <link rel="stylesheet"
             href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet"
+            href="../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
         <!-- Animate Css -->
         <link rel="stylesheet"
             href="../../node_modules/animate.css/animate.min.css">
+        <!-- Animate Css -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
 
     <body>
         <!-- Header -->
         <header class="header">
-            <nav class="navbar navbar-expand-md">
+            <nav class="navbar navbar-expand-md"
+                data-aos="fade-down"
+                data-aos-duration="1500">
                 <!-- logo -->
                 <div class="logo">
                     <img src="../assets/img/logo.png" alt="">
-                    <a class="navbar-brand ml-2" href="#">
+                    <a class="navbar-brand ml-2" href="javascript:void(0)">
                         <h3 class="intro__heading"> My Class </h3></a>
                 </div>
                 <button class="navbar-toggler" type="button"
@@ -45,13 +52,17 @@
                                     class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#block_a">Course</a>
+                            <a class="nav-link" href="#courses">Course</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#block_a">About Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#block_b">Contact</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#"
+                            <a class="nav-link dropdown-toggle"
+                                href="javascript:void(0)"
                                 id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
@@ -59,10 +70,11 @@
                             </a>
                             <div class="dropdown-menu mb-2 px-2"
                                 aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item btn_btnLogin" href="#">Log
+                                <a class="dropdown-item btn_btnLogin"
+                                    href="javascript:void(0)">Log
                                     In</a>
                                 <a class="dropdown-item btn_btnSignin mt-2"
-                                    href="#">
+                                    href="javascript:void(0)">
                                     Sign In</a>
                             </div>
                         </li>
@@ -92,14 +104,21 @@
                     <div class="hero_slide">
                         <div class="hero_slide_background">
                             <img src="../assets/img/slider_background.jpg"
-                                alt="">
+                                alt=""
+                                data-aos="zoom-in"
+                                data-aos-duration="1500"
+                                >
                         </div>
-                        <div class="hero_slide_container d-flex flex-column
+                        <div data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000"
+                            class="hero_slide_container d-flex flex-column
                             align-items-center justify-content-center">
                             <div class="hero_slide_content text-center">
-                                <h1 data-animation-in="fadeInUp"
+                                <h1 data-animation-in="flipInY"
                                     data-animation-out="animate-out fadeOut">Get
-                                    your <span>Education</span> today!</h1>
+                                    your <span class="mx-2">Education</span>
+                                    today!</h1>
                             </div>
                         </div>
                     </div>
@@ -113,9 +132,10 @@
                         <div class="hero_slide_container d-flex flex-column
                             align-items-center justify-content-center">
                             <div class="hero_slide_content text-center">
-                                <h1 data-animation-in="fadeInUp"
+                                <h1 data-animation-in="rollIn"
                                     data-animation-out="animate-out fadeOut">Get
-                                    your <span>Education</span> today!</h1>
+                                    your <span class="mx-2">Education</span>
+                                    today!</h1>
                             </div>
                         </div>
                     </div>
@@ -135,19 +155,303 @@
                             <div class="hero_slide_content text-center">
                                 <h1 data-animation-in="fadeInUp"
                                     data-animation-out="animate-out fadeOut">Get
-                                    your <span>Education</span> today!</h1>
+                                    your <span class="mx-2">Education</span>
+                                    today!</h1>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
-                <div class="hero_slider_left hero_slider_nav trans_200"><span
+                <div class="hero_slider_left hero_slider_nav trans_200"
+                data-aos="fade-right"
+                data-aos-duration="2000"
+                ><span
                         class="trans_200">prev</span></div>
-                <div class="hero_slider_right hero_slider_nav trans_200"><span
+                <div class="hero_slider_right hero_slider_nav trans_200"
+                data-aos="fade-left"
+                data-aos-duration="2000"
+                ><span
                         class="trans_200">next</span></div>
             </div>
         </section>
+
+
+        <!-- Box -->
+        <section class="hero_boxes">
+            <div class="hero_boxes_inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 my-2 hero_box_col"
+                            data-aos="zoom-out-right"
+                            data-aos-duration="1000">
+                            <div class="hero_box d-flex flex-row
+                                align-items-center justify-content-start">
+                                <img src="../assets/img/earth-globe.svg"
+                                    class="svg img-fluid" alt="">
+                                <div class="hero_box_content">
+                                    <h2 class="hero_box_title">Online Courses</h2>
+                                    <a href="javascript:void(0)"
+                                        class="hero_box_link">view more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 my-2 hero_box_col"
+                            data-aos="zoom-out-down"
+                            data-aos-duration="1000">
+                            <div class="hero_box d-flex flex-row
+                                align-items-center justify-content-start">
+                                <img src="../assets/img/books.svg" class="svg
+                                    img-fluid"
+                                    alt="">
+                                <div class="hero_box_content">
+                                    <h2 class="hero_box_title">Our Library</h2>
+                                    <a href="javascript:void(0)"
+                                        class="hero_box_link">view more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 my-2 hero_box_col"
+                            data-aos="zoom-out-left"
+                            data-aos-duration="1000">
+                            <div class="hero_box d-flex flex-row
+                                align-items-center justify-content-start">
+                                <img src="../assets/img/professor.svg"
+                                    class="svg img-fluid" alt="">
+                                <div class="hero_box_content">
+                                    <h2 class="hero_box_title">Our Teachers</h2>
+                                    <a href="javascript:void(0)"
+                                        class="hero_box_link">view more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Courses -->
+        <section id="courses" class="section">
+
+            <!-- container -->
+            <div class="container">
+
+                <!-- row -->
+                <div class="row">
+                    <div class="section-header text-center mb-4">
+                        <h2>Explore Courses</h2>
+                        <p class="lead">Libris vivendo eloquentiam ex ius, nec
+                            id splendide abhorreant.</p>
+                    </div>
+                </div>
+                <!-- /row -->
+
+                <!-- courses -->
+                <div id="courses-wrapper">
+
+                    <!-- row -->
+                    <div class="row">
+
+                        <!-- single course -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"
+                            data-aos="zoom-in-left"
+                            data-aos-duration="1000">
+                            <div class="course">
+                                <a href="javascript:void(0)" class="course-img">
+                                    <img src="../assets/img/course_1.jpg"
+                                        alt="">
+                                    <i class="course-link-icon fa fa-link"></i>
+                                </a>
+                                <a class="course-title"
+                                    href="javascript:void(0)">Beginner to Pro
+                                    in Excel: Financial Modeling and Valuation</a>
+                                <div class="course-details">
+                                    <span class="course-category">Business</span>
+                                    <span class="course-price course-free">Free</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /single course -->
+
+                        <!-- single course -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"
+                            data-aos="zoom-in-down"
+                            data-aos-duration="1000">
+                            <div class="course">
+                                <a href="javascript:void(0)" class="course-img">
+                                    <img src="../assets/img/course_2.jpg"
+                                        alt="">
+                                    <i class="course-link-icon fa fa-link"></i>
+                                </a>
+                                <a class="course-title"
+                                    href="javascript:void(0)">Introduction to
+                                    CSS </a>
+                                <div class="course-details">
+                                    <span class="course-category">Web Design</span>
+                                    <span class="course-price course-premium">Premium</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /single course -->
+
+                        <!-- single course -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"
+                            data-aos="zoom-in-down"
+                            data-aos-duration="1000">
+                            <div class="course">
+                                <a href="javascript:void(0)" class="course-img">
+                                    <img src="../assets/img/course_3.jpg"
+                                        alt="">
+                                    <i class="course-link-icon fa fa-link"></i>
+                                </a>
+                                <a class="course-title"
+                                    href="javascript:void(0)">The Ultimate
+                                    Drawing Course | From Beginner To Advanced</a>
+                                <div class="course-details">
+                                    <span class="course-category">Drawing</span>
+                                    <span class="course-price course-premium">Premium</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /single course -->
+
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"
+                            data-aos="zoom-in-right"
+                            data-aos-duration="1000">
+                            <div class="course">
+                                <a href="javascript:void(0)" class="course-img">
+                                    <img src="../assets/img/course_4.jpg"
+                                        alt="">
+                                    <i class="course-link-icon fa fa-link"></i>
+                                </a>
+                                <a class="course-title"
+                                    href="javascript:void(0)">The Complete
+                                    Web Development Course</a>
+                                <div class="course-details">
+                                    <span class="course-category">Web
+                                        Development</span>
+                                    <span class="course-price course-free">Free</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /single course -->
+
+                    </div>
+                    <!-- /row -->
+
+                    <!-- row -->
+                    <div class="row">
+
+                        <!-- single course -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"
+                            data-aos="zoom-in-left"
+                            data-aos-duration="1000">
+                            <div class="course">
+                                <a href="javascript:void(0)" class="course-img">
+                                    <img src="../assets/img/course_5.jpg"
+                                        alt="">
+                                    <i class="course-link-icon fa fa-link"></i>
+                                </a>
+                                <a class="course-title"
+                                    href="javascript:void(0)">PHP Tips,
+                                    Tricks, and Techniques</a>
+                                <div class="course-details">
+                                    <span class="course-category">Web
+                                        Development</span>
+                                    <span class="course-price course-free">Free</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /single course -->
+
+                        <!-- single course -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"
+                            data-aos="zoom-in-up"
+                            data-aos-duration="1000">
+                            <div class="course">
+                                <a href="javascript:void(0)" class="course-img">
+                                    <img src="../assets/img/course_6.jpg"
+                                        alt="">
+                                    <i class="course-link-icon fa fa-link"></i>
+                                </a>
+                                <a class="course-title"
+                                    href="javascript:void(0)">All You Need To
+                                    Know About Web Design</a>
+                                <div class="course-details">
+                                    <span class="course-category">Web Design</span>
+                                    <span class="course-price course-free">Free</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /single course -->
+
+                        <!-- single course -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"
+                            data-aos="zoom-in-up"
+                            data-aos-duration="1000">
+                            <div class="course">
+                                <a href="javascript:void(0)" class="course-img">
+                                    <img src="../assets/img/course_7.jpg"
+                                        alt="">
+                                    <i class="course-link-icon fa fa-link"></i>
+                                </a>
+                                <a class="course-title"
+                                    href="javascript:void(0)">How to Get
+                                    Started in Photography</a>
+                                <div class="course-details">
+                                    <span class="course-category">Photography</span>
+                                    <span class="course-price course-free">Free</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /single course -->
+
+
+                        <!-- single course -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"
+                            data-aos="zoom-in-right"
+                            data-aos-duration="1000">
+                            <div class="course">
+                                <a href="javascript:void(0)" class="course-img">
+                                    <img src="../assets/img/course_8.jpg"
+                                        alt="">
+                                    <i class="course-link-icon fa fa-link"></i>
+                                </a>
+                                <a class="course-title"
+                                    href="javascript:void(0)">Typography From
+                                    A to Z</a>
+                                <div class="course-details">
+                                    <span class="course-category">Typography</span>
+                                    <span class="course-price course-free">Free</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /single course -->
+
+                    </div>
+                    <!-- /row -->
+
+                </div>
+                <!-- /courses -->
+
+                <div class="center-btn text-center">
+                    <a class="main-button icon-button" href="#courses">More
+                        Courses
+                        <i class="fas fa-arrow-right icon_arrow"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- container -->
+
+        </section>
+        <!-- /Courses -->
+
 
 
         <!-- Optional JavaScript -->
@@ -155,6 +459,11 @@
         <script src="../../node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="../../node_modules/popper.js/dist/popper.min.js"></script>
         <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- AOS animate -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>AOS.init();</script>
+
+
         <!-- ///// -->
         <script src="../../dist/js/index.js"></script>
     </body>

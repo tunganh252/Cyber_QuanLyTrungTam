@@ -116,14 +116,10 @@
     @include media-breakpoint(up-md) {
         .navbar-nav {
             margin: 0 auto;
-
             .nav-item {
-                margin-right: .5rem;
-
                 .nav-link {
                     font-size: .8rem;
                     position: relative;
-
                     &::before {
                         content: '';
                         display: block;
@@ -162,30 +158,30 @@
 
                     .navbar-brand {
                         .intro__heading {
-                            font-size: 2rem;
+                            font-size: 1.8rem;
                         }
                     }
                 }
 
                 .navbar-nav {
                     .nav-item {
-                        margin-right: 1rem;
-
+                        margin-right: .5rem;
                         .nav-link {
-                            font-size: 1rem;
+                            font-size: .8rem;
                             font-weight: 600;
                         }
                     }
                 }
 
                 .phone_contact {
+                    margin: -.5rem -1rem;
                     .phone_contact_overlay {
                         i {
-                            font-size: 1.5rem;
+                            font-size: 1.3rem;
                         }
 
                         span {
-                            font-size: 1.2rem;
+                            font-size: 1rem;
                         }
 
                     }
@@ -197,19 +193,24 @@
     }
 
     @include media-breakpoint(up-xl) {
-        .navbar-nav {
-            .nav-item {
-                margin-right: 1.3rem;
-
-                .nav-link {
-                    font-size: 1.1rem;
-                    font-weight: 700;
+        .header {
+            .navbar {
+                .navbar-nav {
+                    .nav-item {
+                        .nav-link {
+                            font-size: 1rem;
+                        }
+                    }
                 }
+                .phone_contact {
+                    display: block;
+                }
+
             }
         }
-        .phone_contact {
-            display: block;
-        }
+
+        
+        
     }
 
     // @media only screen and (min-width: 1500px) {

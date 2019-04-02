@@ -11,6 +11,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.8.1",
     "animate.css": "^3.7.0",
+    "aos": "^2.3.4",
     "bootstrap": "^4.3.1",
     "css-loader": "^2.1.1",
     "file-loader": "^3.0.1",
