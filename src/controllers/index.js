@@ -108,3 +108,14 @@ function initHeroSlider() {
         }
     }
 }
+
+// Active item navbar
+$('.nav-item .nav-link').click(function () {
+    $('.nav-item .nav-link').removeClass('active');
+    $(this).addClass('active');
+});
+
+
+////////////////////////////
+/////****** MAIN ******/////
+////////////////////////////

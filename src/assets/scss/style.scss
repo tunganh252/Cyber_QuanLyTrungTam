@@ -20,3 +20,19 @@
 @import "Pages/home/slider";
 @import "Pages/home/box";
 @import "Pages/home/course";
+@import "Pages/home/contact";
+@import "Pages/home/aboutUs";
+
+
+
+// Lỗi không add được bg-img trong file aboutUs.scss
+.bg-image {
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	background-position:none;
+    background-size:cover;
+    background-image: url('../img/usf-group-study.jpg');
+}
