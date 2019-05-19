@@ -6,9 +6,16 @@ module.exports = {
     ///////////////////////
     /** Đóng gói file JS */
     ///////////////////////
-    entry:{
-        index: './src/controllers/index.js',
-        concu: './src/controllers/concu.js',
+    entry: {
+        index: [
+            './src/controllers/index.js',
+            './src/modal/nguoiDung.js',
+            './src/services/nguoiDungServices.js',
+            './src/controllers/quanLyNguoiDung/login.js',
+            './src/controllers/quanLyNguoiDung/dangKy.js',
+            './src/controllers/quanLyNguoiDung/quanLyNguoiDung.js',
+            
+            ],
     },
     /// File đầu vào 
     output: {

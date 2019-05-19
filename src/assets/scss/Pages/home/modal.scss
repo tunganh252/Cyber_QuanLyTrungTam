@@ -1,0 +1,235 @@
+$blue: #809BCE;
+$purple: #9893DA;
+$grey: #C3C3D8;
+
+.modal_form {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 10% 5% 10% 5%;
+    overflow: hidden;
+    outline: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+@include media-breakpoint(up-md) {
+    .modal_form {
+        padding: 10% 20% 10% 20%;
+    }
+}
+
+@include media-breakpoint(up-xl) {
+    .modal_form {
+        padding: 10% 30% 10% 30%;
+    }
+}
+
+.container_modal {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: relative;
+    display: grid;
+    border-radius: 5px;
+    grid-template: 100% / 50% 50%;
+    box-shadow: 2px 2px 10px 0 black;
+}
+
+.message {
+    position: absolute;
+    background: white;
+    width: 50%;
+    height: 100%;
+    border-radius: 5px;
+    transition: 0.5s all ease;
+    transform: translateX(0);
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:before {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 70%;
+        background: $grey;
+        opacity: 0;
+        left: 0;
+        top: 15%;
+    }
+
+    .button {
+        margin: 5px 0;
+    }
+}
+
+.signup {
+    &:before {
+        opacity: 0.3;
+        left: 0;
+    }
+}
+
+.login {
+    &:before {
+        opacity: 0.3;
+        left: 100%;
+    }
+}
+
+
+.btn-wrapper {
+    width: 60%;
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+
+    &--heading {
+        height: 50px;
+        color: black;
+    }
+}
+
+.form--signup {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .form-control {
+        font-size: .7rem;
+
+        &:focus {
+            box-shadow: none;
+            border-color: #FFB606
+        }
+    }
+
+    label {
+        font-size: .6rem;
+    }
+    span{
+        font-size: .5rem;
+        color: red;
+    }
+}
+
+.form--login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_setting {
+    width: 70%;
+
+    input {
+        width: 90%;
+        border: 0;
+        border-bottom: 1px solid rgba($grey, 0.5);
+        font-size: .7rem;
+        font-weight: 300;
+        margin-bottom: .5rem;
+        color: #797A9E;
+        letter-spacing: 0.11em;
+
+        &::placeholder {
+            color: #C3C3D8;
+            font-size: .7rem;
+        }
+
+        &:focus {
+            outline: 0;
+            border-bottom: 1px solid rgba(#f39c12, 0.7);
+            transition: 0.6s all ease;
+        }
+    }
+}
+
+.button {
+    width: 100%;
+    height: 30px;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    position: relative;
+    z-index: 3;
+    letter-spacing: 2px;
+    background-color: #FFB606;
+    font-family: 'Playfair Display', serif;
+
+    &:hover {
+        transform: translateY(4px);
+        transition: 0.4s all ease;
+    }
+}
+
+
+// @media (max-width: 750px){
+//   .container_modal {
+//     transform: scale(0.8);
+//   }
+// }
+// @media (max-width: 450px){
+//   .container_modal {
+//     transform: scale(0.5);
+//   }
+// }
+//   /////////////////////////////////
+.modal_form {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .container_modal {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  /* The Close Button */
+.close {
+    color: #f39c12;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    right: 10px;
+    font-size: 2rem;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }

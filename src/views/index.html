@@ -1,681 +1,831 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1,
+    <head>
+        <title>Quản Lý Trung Tâm</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,
             shrink-to-fit=no">
-    <!-- Bootstrap call on index.js -->
-    <!-- Owl Carousel call on index.js-->
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
-    <!-- Animate Css -->
-    <link rel="stylesheet" href="../../node_modules/animate.css/animate.min.css">
-    <!-- Animate Css -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
+        <!-- Bootstrap call on index.js -->
+        <!-- Owl Carousel call on index.js-->
+        <link rel="stylesheet"
+            href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet"
+            href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet"
+            href="../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+        <!-- Animate Css -->
+        <link rel="stylesheet"
+            href="../../node_modules/animate.css/animate.min.css">
+        <!-- Animate Css -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
 
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar navbar-expand-md" data-aos="fade-down" data-aos-duration="1500">
-            <!-- logo -->
-            <div class="logo">
-                <img src="../assets/img/logo.png" alt="">
-                <a class="navbar-brand ml-2" href="javascript:void(0)">
-                    <h3 class="intro__heading"> My Class </h3>
-                </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon1">
-                    <i class="fas fa-bars"></i>
-                </span>
-                <span class="navbar-toggler-icon2">
-                    <i class="fas fa-times"></i>
-                </span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#block_slider">Home<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#courses">Course</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#block_info">Infomation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#block_contact">Contact</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Login MyClass
-                        </a>
-                        <div class="dropdown-menu mb-2 px-2" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item btn_btnLogin" href="javascript:void(0)">Log
-                                In</a>
-                            <a class="dropdown-item btn_btnSignin mt-2" href="javascript:void(0)">
-                                Sign In</a>
+    <body>
+        <!-- Header -->
+
+        <header class="header">
+            <nav class="navbar navbar-expand-md"
+                data-aos="fade-down"
+                data-aos-duration="1500">
+                <!-- logo -->
+                <div class="logo">
+                    <img src="../assets/img/logo.png" alt="">
+                    <a class="navbar-brand ml-2" href="javascript:void(0)">
+                        <h3 class="intro__heading"> My Class </h3>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button"
+                    data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon1">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                    <span class="navbar-toggler-icon2">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#block_slider">Home<span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#courses">Course</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#block_info">Infomation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#block_contact">Contact</a>
+                        </li>
+                        <div id="login">
+                            <li class="nav-item" id="myBtn">
+                                <a class="nav-link" href="javascript:void(0)">Login
+                                    My Class</a>
+                            </li>
+
                         </div>
-                    </li>
-                </ul>
-                <!-- phone -->
-                <div class="phone_contact">
-                    <div class="phone_contact_overlay">
-                        <i class="fas fa-phone-volume"></i>
-                        <span>+84 3666 18 162</span>
+                        <!-- <li class="nav-item dropdown show">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true">CYBERSOFT</a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">Thông tin cá nhân</a>
+                            <a class="dropdown-item" href="#">Cài đặt</a>
+                            <a class="dropdown-item" href="#">Thoát</a>
+                        </div>
+                    </li> -->
+                    </ul>
+                    <!-- phone -->
+                    <div class="phone_contact">
+                        <div class="phone_contact_overlay">
+                            <i class="fas fa-phone-volume"></i>
+                            <span>+84 3666 18 162</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
+        <!-- =========-->
+        <!-- Home Page-->
+        <!-- //////// -->
 
-    <!-- =========-->
-    <!-- Home Page-->
-    <!-- //////// -->
+        <!-- Slider -->
+        <section class="slider_home" id="block_slider">
+            <!-- Hero Slider -->
+            <div class="hero_slider_container">
+                <div class="hero_slider owl-carousel">
 
-    <!-- Slider -->
-    <section class="slider_home" id="block_slider">
-        <!-- Hero Slider -->
-        <div class="hero_slider_container">
-            <div class="hero_slider owl-carousel">
-
-                <!-- Hero Slide -->
-                <div class="hero_slide">
-                    <div class="hero_slide_background">
-                        <img src="../assets/img/slider_background.jpg" alt="" data-aos="zoom-in"
-                            data-aos-duration="1500">
-                    </div>
-                    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000" class="hero_slide_container d-flex flex-column
+                    <!-- Hero Slide -->
+                    <div class="hero_slide">
+                        <div class="hero_slide_background">
+                            <img src="../assets/img/slider_background.jpg"
+                                alt="" data-aos="zoom-in"
+                                data-aos-duration="1500">
+                        </div>
+                        <div data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000" class="hero_slide_container
+                            d-flex flex-column
                             align-items-center justify-content-center">
-                        <div class="hero_slide_content text-center">
-                            <h1 data-animation-in="flipInY" data-animation-out="animate-out fadeOut">Get
-                                your <span class="mx-2">Education</span>
-                                today!</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hero Slide -->
-                <div class="hero_slide">
-                    <div class="hero_slide_background">
-                        <img src="../assets/img/cover.jpg" alt="">
-                    </div>
-                    <div class="hero_slide_container d-flex flex-column
-                            align-items-center justify-content-center">
-                        <div class="hero_slide_content text-center">
-                            <h1 data-animation-in="rollIn" data-animation-out="animate-out fadeOut">Get
-                                your <span class="mx-2">Education</span>
-                                today!</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hero Slide -->
-                <div class="hero_slide">
-                    <div class="hero_slide_background">
-                        <img class="course3" src="../assets/img/usf-group-study.jpg" alt="">
-                        <div class="cu">
-
-                        </div>
-
-                    </div>
-                    <div class="hero_slide_container d-flex flex-column
-                            align-items-center justify-content-center">
-                        <div class="hero_slide_content text-center">
-                            <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Get
-                                your <span class="mx-2">Education</span>
-                                today!</h1>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="hero_slider_left hero_slider_nav trans_200" data-aos="fade-right" data-aos-duration="2000"><span
-                    class="trans_200">prev</span></div>
-            <div class="hero_slider_right hero_slider_nav trans_200" data-aos="fade-left" data-aos-duration="2000"><span
-                    class="trans_200">next</span></div>
-        </div>
-    </section>
-
-
-    <!-- Box -->
-    <section class="hero_boxes">
-        <div class="hero_boxes_inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 my-2 hero_box_col" data-aos="zoom-out-right" data-aos-duration="1000">
-                        <div class="hero_box d-flex flex-row
-                                align-items-center justify-content-start">
-                            <img src="../assets/img/earth-globe.svg" class="svg img-fluid" alt="">
-                            <div class="hero_box_content">
-                                <h2 class="hero_box_title">Online Courses</h2>
-                                <a href="javascript:void(0)" class="hero_box_link">view more</a>
+                            <div class="hero_slide_content text-center">
+                                <h1 data-animation-in="flipInY"
+                                    data-animation-out="animate-out fadeOut">Get
+                                    your <span class="mx-2">Education</span>
+                                    today!</h1>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 my-2 hero_box_col" data-aos="zoom-out-down" data-aos-duration="1000">
-                        <div class="hero_box d-flex flex-row
+                    <!-- Hero Slide -->
+                    <div class="hero_slide">
+                        <div class="hero_slide_background">
+                            <img src="../assets/img/cover.jpg" alt="">
+                        </div>
+                        <div class="hero_slide_container d-flex flex-column
+                            align-items-center justify-content-center">
+                            <div class="hero_slide_content text-center">
+                                <h1 data-animation-in="swing"
+                                    data-animation-out="animate-out fadeOut">Get
+                                    your <span class="mx-2">Education</span>
+                                    today!</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Slide -->
+                    <div class="hero_slide">
+                        <div class="hero_slide_background">
+                            <img class="course3"
+                                src="../assets/img/usf-group-study.jpg" alt="">
+                            <div class="cu">
+
+                            </div>
+
+                        </div>
+                        <div class="hero_slide_container d-flex flex-column
+                            align-items-center justify-content-center">
+                            <div class="hero_slide_content text-center">
+                                <h1 data-animation-in="fadeInUp"
+                                    data-animation-out="animate-out fadeOut">Get
+                                    your <span class="mx-2">Education</span>
+                                    today!</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="hero_slider_left hero_slider_nav trans_200"
+                    data-aos="fade-right" data-aos-duration="2000"><span
+                        class="trans_200">prev</span></div>
+                <div class="hero_slider_right hero_slider_nav trans_200"
+                    data-aos="fade-left" data-aos-duration="2000"><span
+                        class="trans_200">next</span></div>
+            </div>
+        </section>
+
+
+        <!-- Box -->
+        <section class="hero_boxes">
+            <div class="hero_boxes_inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 my-2 hero_box_col"
+                            data-aos="zoom-out-right" data-aos-duration="1000">
+                            <div class="hero_box d-flex flex-row
                                 align-items-center justify-content-start">
-                            <img src="../assets/img/books.svg" class="svg
+                                <img src="../assets/img/earth-globe.svg"
+                                    class="svg img-fluid" alt="">
+                                <div class="hero_box_content">
+                                    <h2 class="hero_box_title">Online Courses</h2>
+                                    <a href="javascript:void(0)"
+                                        class="hero_box_link">view more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 my-2 hero_box_col"
+                            data-aos="zoom-out-down" data-aos-duration="1000">
+                            <div class="hero_box d-flex flex-row
+                                align-items-center justify-content-start">
+                                <img src="../assets/img/books.svg" class="svg
                                     img-fluid" alt="">
-                            <div class="hero_box_content">
-                                <h2 class="hero_box_title">Our Library</h2>
-                                <a href="javascript:void(0)" class="hero_box_link">view more</a>
+                                <div class="hero_box_content">
+                                    <h2 class="hero_box_title">Our Library</h2>
+                                    <a href="javascript:void(0)"
+                                        class="hero_box_link">view more</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-4 my-2 hero_box_col" data-aos="zoom-out-left" data-aos-duration="1000">
-                        <div class="hero_box d-flex flex-row
+                        <div class="col-lg-4 my-2 hero_box_col"
+                            data-aos="zoom-out-left" data-aos-duration="1000">
+                            <div class="hero_box d-flex flex-row
                                 align-items-center justify-content-start">
-                            <img src="../assets/img/professor.svg" class="svg img-fluid" alt="">
-                            <div class="hero_box_content">
-                                <h2 class="hero_box_title">Our Teachers</h2>
-                                <a href="javascript:void(0)" class="hero_box_link">view more</a>
+                                <img src="../assets/img/professor.svg"
+                                    class="svg img-fluid" alt="">
+                                <div class="hero_box_content">
+                                    <h2 class="hero_box_title">Our Teachers</h2>
+                                    <a href="javascript:void(0)"
+                                        class="hero_box_link">view more</a>
+                                </div>
                             </div>
                         </div>
+
                     </div>
-
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-    <!-- Courses -->
-    <section id="courses" class="section mb-5">
+        <!-- Courses -->
+        <section id="courses" class="section mb-5">
 
-        <!-- container -->
-        <div class="container">
-
-            <!-- row -->
-            <div class="row">
-                <div class="section-header text-center mb-4">
-                    <h2>Explore Courses</h2>
-                    <p class="lead">Libris vivendo eloquentiam ex ius, nec
-                        id splendide abhorreant.</p>
-                </div>
-            </div>
-            <!-- /row -->
-
-            <!-- courses -->
-            <div id="courses-wrapper">
+            <!-- container -->
+            <div class="container">
 
                 <!-- row -->
                 <div class="row">
-
-                    <!-- single course -->
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6" data-aos="zoom-in-left" data-aos-duration="1000">
-                        <div class="course">
-                            <a href="javascript:void(0)" class="course-img">
-                                <img src="../assets/img/course_1.jpg" alt="">
-                                <i class="course-link-icon fa fa-link"></i>
-                            </a>
-                            <a class="course-title" href="javascript:void(0)">Beginner to Pro
-                                in Excel: Financial Modeling and Valuation</a>
-                            <div class="course-details">
-                                <span class="course-category">Business</span>
-                                <span class="course-price course-free">Free</span>
-                            </div>
-                        </div>
+                    <div class="section-header text-center mb-4">
+                        <h2>Explore Courses</h2>
+                        <p class="lead">Libris vivendo eloquentiam ex ius, nec
+                            id splendide abhorreant.</p>
                     </div>
-                    <!-- /single course -->
-
-                    <!-- single course -->
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6" data-aos="zoom-in-down" data-aos-duration="1000">
-                        <div class="course">
-                            <a href="javascript:void(0)" class="course-img">
-                                <img src="../assets/img/course_2.jpg" alt="">
-                                <i class="course-link-icon fa fa-link"></i>
-                            </a>
-                            <a class="course-title" href="javascript:void(0)">Introduction to
-                                CSS </a>
-                            <div class="course-details">
-                                <span class="course-category">Web Design</span>
-                                <span class="course-price course-premium">Premium</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /single course -->
-
-                    <!-- single course -->
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6" data-aos="zoom-in-down" data-aos-duration="1000">
-                        <div class="course">
-                            <a href="javascript:void(0)" class="course-img">
-                                <img src="../assets/img/course_3.jpg" alt="">
-                                <i class="course-link-icon fa fa-link"></i>
-                            </a>
-                            <a class="course-title" href="javascript:void(0)">The Ultimate
-                                Drawing Course | From Beginner To Advanced</a>
-                            <div class="course-details">
-                                <span class="course-category">Drawing</span>
-                                <span class="course-price course-premium">Premium</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /single course -->
-
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6" data-aos="zoom-in-right" data-aos-duration="1000">
-                        <div class="course">
-                            <a href="javascript:void(0)" class="course-img">
-                                <img src="../assets/img/course_4.jpg" alt="">
-                                <i class="course-link-icon fa fa-link"></i>
-                            </a>
-                            <a class="course-title" href="javascript:void(0)">The Complete
-                                Web Development Course</a>
-                            <div class="course-details">
-                                <span class="course-category">Web
-                                    Development</span>
-                                <span class="course-price course-free">Free</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /single course -->
-
                 </div>
                 <!-- /row -->
 
+                <!-- courses -->
+                <div id="courses-wrapper">
+
+                    <!-- row -->
+                    <div class="row">
+
+                        <!-- single course -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"
+                            data-aos="zoom-in-left" data-aos-duration="1000">
+                            <div class="course">
+                                <a href="javascript:void(0)" class="course-img">
+                                    <img src="../assets/img/course_1.jpg"
+                                        alt="">
+                                    <i class="course-link-icon fa fa-link"></i>
+                                </a>
+                                <a class="course-title"
+                                    href="javascript:void(0)">Beginner to Pro
+                                    in Excel: Financial Modeling and Valuation</a>
+                                <div class="course-details">
+                                    <span class="course-category">Business</span>
+                                    <span class="course-price course-free">Free</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /single course -->
+
+                        <!-- single course -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"
+                            data-aos="zoom-in-down" data-aos-duration="1000">
+                            <div class="course">
+                                <a href="javascript:void(0)" class="course-img">
+                                    <img src="../assets/img/course_2.jpg"
+                                        alt="">
+                                    <i class="course-link-icon fa fa-link"></i>
+                                </a>
+                                <a class="course-title"
+                                    href="javascript:void(0)">Introduction to
+                                    CSS </a>
+                                <div class="course-details">
+                                    <span class="course-category">Web Design</span>
+                                    <span class="course-price course-premium">Premium</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /single course -->
+
+                        <!-- single course -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"
+                            data-aos="zoom-in-down" data-aos-duration="1000">
+                            <div class="course">
+                                <a href="javascript:void(0)" class="course-img">
+                                    <img src="../assets/img/course_3.jpg"
+                                        alt="">
+                                    <i class="course-link-icon fa fa-link"></i>
+                                </a>
+                                <a class="course-title"
+                                    href="javascript:void(0)">The Ultimate
+                                    Drawing Course | From Beginner To Advanced</a>
+                                <div class="course-details">
+                                    <span class="course-category">Drawing</span>
+                                    <span class="course-price course-premium">Premium</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /single course -->
+
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"
+                            data-aos="zoom-in-right" data-aos-duration="1000">
+                            <div class="course">
+                                <a href="javascript:void(0)" class="course-img">
+                                    <img src="../assets/img/course_4.jpg"
+                                        alt="">
+                                    <i class="course-link-icon fa fa-link"></i>
+                                </a>
+                                <a class="course-title"
+                                    href="javascript:void(0)">The Complete
+                                    Web Development Course</a>
+                                <div class="course-details">
+                                    <span class="course-category">Web
+                                        Development</span>
+                                    <span class="course-price course-free">Free</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /single course -->
+
+                    </div>
+                    <!-- /row -->
+
+                    <!-- row -->
+                    <div class="row">
+
+                        <!-- single course -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"
+                            data-aos="zoom-in-left" data-aos-duration="1000">
+                            <div class="course">
+                                <a href="javascript:void(0)" class="course-img">
+                                    <img src="../assets/img/course_5.jpg"
+                                        alt="">
+                                    <i class="course-link-icon fa fa-link"></i>
+                                </a>
+                                <a class="course-title"
+                                    href="javascript:void(0)">PHP Tips,
+                                    Tricks, and Techniques</a>
+                                <div class="course-details">
+                                    <span class="course-category">Web
+                                        Development</span>
+                                    <span class="course-price course-free">Free</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /single course -->
+
+                        <!-- single course -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"
+                            data-aos="zoom-in-up" data-aos-duration="1000">
+                            <div class="course">
+                                <a href="javascript:void(0)" class="course-img">
+                                    <img src="../assets/img/course_6.jpg"
+                                        alt="">
+                                    <i class="course-link-icon fa fa-link"></i>
+                                </a>
+                                <a class="course-title"
+                                    href="javascript:void(0)">All You Need To
+                                    Know About Web Design</a>
+                                <div class="course-details">
+                                    <span class="course-category">Web Design</span>
+                                    <span class="course-price course-free">Free</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /single course -->
+
+                        <!-- single course -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"
+                            data-aos="zoom-in-up" data-aos-duration="1000">
+                            <div class="course">
+                                <a href="javascript:void(0)" class="course-img">
+                                    <img src="../assets/img/course_7.jpg"
+                                        alt="">
+                                    <i class="course-link-icon fa fa-link"></i>
+                                </a>
+                                <a class="course-title"
+                                    href="javascript:void(0)">How to Get
+                                    Started in Photography</a>
+                                <div class="course-details">
+                                    <span class="course-category">Photography</span>
+                                    <span class="course-price course-free">Free</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /single course -->
+
+
+                        <!-- single course -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6"
+                            data-aos="zoom-in-right" data-aos-duration="1000">
+                            <div class="course">
+                                <a href="javascript:void(0)" class="course-img">
+                                    <img src="../assets/img/course_8.jpg"
+                                        alt="">
+                                    <i class="course-link-icon fa fa-link"></i>
+                                </a>
+                                <a class="course-title"
+                                    href="javascript:void(0)">Typography From
+                                    A to Z</a>
+                                <div class="course-details">
+                                    <span class="course-category">Typography</span>
+                                    <span class="course-price course-free">Free</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /single course -->
+
+                    </div>
+                    <!-- /row -->
+
+                </div>
+                <!-- /courses -->
+
+                <div class="center-btn text-center">
+                    <a class="main-button icon-button" href="#courses">More
+                        Courses
+                        <i class="fas fa-arrow-right icon_arrow"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- container -->
+
+        </section>
+        <!-- /Courses -->
+
+
+
+        <!-- ========================= -->
+        <!-- ********* About Us ******** -->
+        <!-- ========================= -->
+
+        <section class="info" id="block_info">
+            <!-- Backgound Image -->
+            <div class="bg-image bg-parallax overlay"></div>
+            <!-- /Backgound Image -->
+
+            <!-- container -->
+            <div class="container">
                 <!-- row -->
                 <div class="row">
-
-                    <!-- single course -->
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6" data-aos="zoom-in-left" data-aos-duration="1000">
-                        <div class="course">
-                            <a href="javascript:void(0)" class="course-img">
-                                <img src="../assets/img/course_5.jpg" alt="">
-                                <i class="course-link-icon fa fa-link"></i>
+                    <div class="col-md-9 info_content">
+                        <h2 class="text-white">Lorem ipsum dolor sit amet.</h2>
+                        <p class="lead text-white">Commodi asperiores tempora
+                            laboriosam dolor magnam consectetur facilis
+                            ullam cum nisi hic.</p>
+                        <div class="center-btn">
+                            <a class="main-button icon-button" href="#courses">Information
+                                <i class="fas fa-arrow-right icon_arrow"></i>
                             </a>
-                            <a class="course-title" href="javascript:void(0)">PHP Tips,
-                                Tricks, and Techniques</a>
-                            <div class="course-details">
-                                <span class="course-category">Web
-                                    Development</span>
-                                <span class="course-price course-free">Free</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /single course -->
-
-                    <!-- single course -->
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6" data-aos="zoom-in-up" data-aos-duration="1000">
-                        <div class="course">
-                            <a href="javascript:void(0)" class="course-img">
-                                <img src="../assets/img/course_6.jpg" alt="">
-                                <i class="course-link-icon fa fa-link"></i>
-                            </a>
-                            <a class="course-title" href="javascript:void(0)">All You Need To
-                                Know About Web Design</a>
-                            <div class="course-details">
-                                <span class="course-category">Web Design</span>
-                                <span class="course-price course-free">Free</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /single course -->
-
-                    <!-- single course -->
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6" data-aos="zoom-in-up" data-aos-duration="1000">
-                        <div class="course">
-                            <a href="javascript:void(0)" class="course-img">
-                                <img src="../assets/img/course_7.jpg" alt="">
-                                <i class="course-link-icon fa fa-link"></i>
-                            </a>
-                            <a class="course-title" href="javascript:void(0)">How to Get
-                                Started in Photography</a>
-                            <div class="course-details">
-                                <span class="course-category">Photography</span>
-                                <span class="course-price course-free">Free</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /single course -->
-
-
-                    <!-- single course -->
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6" data-aos="zoom-in-right" data-aos-duration="1000">
-                        <div class="course">
-                            <a href="javascript:void(0)" class="course-img">
-                                <img src="../assets/img/course_8.jpg" alt="">
-                                <i class="course-link-icon fa fa-link"></i>
-                            </a>
-                            <a class="course-title" href="javascript:void(0)">Typography From
-                                A to Z</a>
-                            <div class="course-details">
-                                <span class="course-category">Typography</span>
-                                <span class="course-price course-free">Free</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /single course -->
-
-                </div>
-                <!-- /row -->
-
-            </div>
-            <!-- /courses -->
-
-            <div class="center-btn text-center">
-                <a class="main-button icon-button" href="#courses">More
-                    Courses
-                    <i class="fas fa-arrow-right icon_arrow"></i>
-                </a>
-            </div>
-        </div>
-
-        <!-- container -->
-
-    </section>
-    <!-- /Courses -->
-
-
-
-    <!-- ========================= -->
-    <!-- ********* About Us ******** -->
-    <!-- ========================= -->
-
-    <section class="info" id="block_info">
-        <!-- Backgound Image -->
-        <div class="bg-image bg-parallax overlay"></div>
-        <!-- /Backgound Image -->
-
-        <!-- container -->
-        <div class="container">
-            <!-- row -->
-            <div class="row">
-                <div class="col-md-6 info_content">
-                    <h2 class="text-white">Lorem ipsum dolor sit amet.</h2>
-                    <p class="lead text-white">Commodi asperiores tempora laboriosam dolor magnam consectetur facilis
-                        ullam cum nisi hic.</p>
-                    <div class="center-btn">
-                        <a class="main-button icon-button" href="#courses">Information
-                            <i class="fas fa-arrow-right icon_arrow"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
-
-    <!-- ========================= -->
-    <!-- ********* CONTACT ******** -->
-    <!-- ========================= -->
-    <!-- Contact -->
-
-    <div class="contact" id="block_contact">
-        <div class="container">
-            <div class="row  mb-3">
-                <div class="col-lg-8">
-
-                    <!-- Contact Form -->
-                    <div class="contact_form">
-                        <div class="contact_title">Get in touch</div>
-
-                        <div class="contact_form_container">
-                            <form action="post">
-                                <input id="contact_form_name" class="input_field contact_form_name" type="text"
-                                    placeholder="Name" required="required" data-error="Name is required.">
-                                <input id="contact_form_email" class="input_field contact_form_email" type="email"
-                                    placeholder="E-mail" required="required" data-error="Valid email is required.">
-                                <textarea id="contact_form_message" class="text_field contact_form_message"
-                                    name="message" placeholder="Message" required="required"
-                                    data-error="Please, write us a message."></textarea>
-                                <button id="contact_send_btn" type="button" class="contact_send_btn mb-5 trans_200"
-                                    value="Submit">send message</button>
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="about">
-                        <div class="about_title">Join Courses</div>
-                        <p class="about_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
-                            temporibus voluptatum pariatur hic ipsa quae totam maxime maiores aperiam animi repellendus
-                            quas dignissimos autem ea at, rerum cum. Qui, possimus!</p>
-
-                        <div class="contact_info">
-                            <ul>
-                                <li class="contact_info_item">
-                                    <div class="contact_info_icon">
-                                        <img src="../assets/img/placeholder.svg"
-                                            alt="https://www.flaticon.com/authors/lucy-g">
-                                    </div>
-                                    118 Le Minh Xuan, Tan Binh HCMC
-                                </li>
-                                <li class="contact_info_item">
-                                    <div class="contact_info_icon">
-                                        <img src="../assets/img/smartphone.svg"
-                                            alt="https://www.flaticon.com/authors/lucy-g">
-                                    </div>
-                                    03 666 18 162
-                                </li>
-                                <li class="contact_info_item">
-                                    <div class="contact_info_icon">
-                                        <img src="../assets/img/envelope.svg"
-                                            alt="https://www.flaticon.com/authors/lucy-g">
-                                    </div>tunganhnguyen2502@gmail.com
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Google Map -->
-
-            <div class="row">
-                <div class="col">
-                    <div id="google_map">
-                        <div class="map_container">
-                            <div id="map">
-
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3147824091325!2d106.65225531471452!3d10.787185261944929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eca3c3c239d%3A0xfcc33c70b8a7dba3!2zMTE4IEzDqiBNaW5oIFh1w6JuLCBQaMaw4budbmcgNywgVMOibiBCw6xuaCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1554286235706!5m2!1svi!2s"
-                                    width="100%" height="100%" frameborder="0" style="border:0"
-                                    allowfullscreen></iframe>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-        </div>
-    </div>
+        </section>
 
 
 
+        <!-- ========================= -->
+        <!-- ********* CONTACT ******** -->
+        <!-- ========================= -->
 
+        <div class="contact" id="block_contact">
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col-lg-8">
+                        <!-- Contact Form -->
+                        <div class="contact_form">
+                            <div class="contact_title">Get in touch</div>
 
+                            <div class="contact_form_container">
+                                <form action="post">
+                                    <input id="contact_form_name"
+                                        class="input_field contact_form_name"
+                                        type="text"
+                                        placeholder="Name" required="required"
+                                        data-error="Name is required.">
+                                    <input id="contact_form_email"
+                                        class="input_field contact_form_email"
+                                        type="email"
+                                        placeholder="E-mail" required="required"
+                                        data-error="Valid email is required.">
+                                    <textarea id="contact_form_message"
+                                        class="text_field contact_form_message"
+                                        name="message" placeholder="Message"
+                                        required="required" data-error="Please,
+                                        write us a
+                                        message."></textarea>
+                                    <button id="contact_send_btn" type="button"
+                                        class="contact_send_btn mb-5 trans_200"
+                                        value="Submit">send message</button>
+                                </form>
+                            </div>
+                        </div>
 
+                    </div>
 
+                    <div class="col-lg-4">
+                        <div class="about">
+                            <div class="about_title">Join Courses</div>
+                            <p class="about_text">Lorem ipsum, dolor sit amet
+                                consectetur adipisicing elit. Officiis
+                                temporibus voluptatum pariatur hic ipsa quae
+                                totam maxime maiores aperiam animi repellendus
+                                quas dignissimos autem ea at, rerum cum. Qui,
+                                possimus!</p>
 
+                            <div class="contact_info">
+                                <ul>
+                                    <li class="contact_info_item">
+                                        <div class="contact_info_icon">
+                                            <img
+                                                src="../assets/img/placeholder.svg"
+                                                alt="https://www.flaticon.com/authors/lucy-g">
+                                        </div>
+                                        118 Le Minh Xuan, Tan Binh HCMC
+                                    </li>
+                                    <li class="contact_info_item">
+                                        <div class="contact_info_icon">
+                                            <img
+                                                src="../assets/img/smartphone.svg"
+                                                alt="https://www.flaticon.com/authors/lucy-g">
+                                        </div>
+                                        03 666 18 162
+                                    </li>
+                                    <li class="contact_info_item">
+                                        <div class="contact_info_icon">
+                                            <img
+                                                src="../assets/img/envelope.svg"
+                                                alt="https://www.flaticon.com/authors/lucy-g">
+                                        </div>tunganhnguyen2502@gmail.com
+                                    </li>
+                                </ul>
+                            </div>
 
+                        </div>
+                    </div>
 
+                </div>
 
+                <!-- Google Map -->
 
-
-
-
-
-
-    <!-- ========================= -->
-    <!-- ********* FOOTER ******** -->
-    <!-- ========================= -->
-
-    <!-- Footer -->
-
-    <footer class="footer">
-        <div class="container">
-
-            <!-- Newsletter -->
-
-            <div class="newsletter">
                 <div class="row">
                     <div class="col">
-                        <div class="section_title text-center">
-                            <h1>Subscribe to newsletter</h1>
-                        </div>
-                    </div>
-                </div>
+                        <div id="google_map">
+                            <div class="map_container">
+                                <div id="map">
 
-                <div class="row mt-3">
-                    <div class="col text-center">
-                        <div class="newsletter_form_container mx-auto">
-                            <form action="post">
-                                <div
-                                    class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
-                                    <input id="newsletter_email" class="newsletter_email mb-3" type="email"
-                                        placeholder="Email Address" required="required"
-                                        data-error="Valid email is required.">
-                                    <button id="newsletter_submit" type="submit"
-                                        class="newsletter_submit_btn trans_300 mb-3" value="Submit">Subscribe</button>
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3147824091325!2d106.65225531471452!3d10.787185261944929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eca3c3c239d%3A0xfcc33c70b8a7dba3!2zMTE4IEzDqiBNaW5oIFh1w6JuLCBQaMaw4budbmcgNywgVMOibiBCw6xuaCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1554286235706!5m2!1svi!2s"
+                                        width="100%" height="100%"
+                                        frameborder="0" style="border:0"
+                                        allowfullscreen></iframe>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
+        </div>
 
-            <!-- Footer Content -->
 
-            <div class="footer_content">
-                <div class="row">
 
-                    <!-- Footer Column - About -->
-                    <div class="col-lg-3 footer_col">
 
-                        <!-- Logo -->
-                        <div class="logo_container mt-2">
-                            <div class="logo">
-                                <img src="../assets/img/logo.png" alt="">
-                                <span>course</span>
+        <!-- ========================= -->
+        <!-- ********* FOOTER ******** -->
+        <!-- ========================= -->
+
+        <!-- Footer -->
+
+        <footer class="footer">
+            <div class="container">
+
+                <!-- Newsletter -->
+
+                <div class="newsletter">
+                    <div class="row">
+                        <div class="col">
+                            <div class="section_title text-center">
+                                <h1>Subscribe MyClass</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col text-center">
+                            <div class="newsletter_form_container mx-auto">
+                                <form action="post">
+                                    <div class="newsletter_form d-flex
+                                        flex-md-row flex-column flex-xs-column
+                                        align-items-center
+                                        justify-content-center">
+                                        <input id="newsletter_email"
+                                            class="newsletter_email mb-3"
+                                            type="email"
+                                            placeholder="Email Address"
+                                            required="required"
+                                            data-error="Valid email is
+                                            required.">
+                                        <button id="newsletter_submit"
+                                            type="submit"
+                                            class="newsletter_submit_btn
+                                            trans_300 mb-3" value="Submit">Subscribe</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Footer Content -->
+
+                <div class="footer_content">
+                    <div class="row">
+
+                        <!-- Footer Column - About -->
+                        <div class="col-lg-3 footer_col">
+
+                            <!-- Logo -->
+                            <div class="logo_container mt-2">
+                                <div class="logo">
+                                    <img src="../assets/img/logo.png" alt="">
+                                    <span>course</span>
+                                </div>
+                            </div>
+
+                            <p class="footer_about_text">Lorem ipsum dolor sit,
+                                amet consectetur itaque, qui veritatis
+                                adipisicing elit. Animi
+                                ipsum, itaque, qui veritatis eligendi deleniti
+                                tenetur distinctio ?</p>
+
+                        </div>
+
+                        <!-- Footer Column - Menu -->
+
+                        <div class="col-lg-3 footer_col">
+                            <div class="footer_column_title">Menu</div>
+                            <div class="footer_column_content">
+                                <ul>
+                                    <li class="footer_list_item"><a href="#">Home</a></li>
+                                    <li class="footer_list_item"><a
+                                            href="#courses">Courses</a></li>
+                                    <li class="footer_list_item"><a
+                                            href="#about">About Us</a></li>
+                                    <li class="footer_list_item"><a
+                                            href="#contact">Contact</a></li>
+                                </ul>
                             </div>
                         </div>
 
-                        <p class="footer_about_text">Lorem ipsum dolor sit, amet consectetur itaque, qui veritatis
-                            adipisicing elit. Animi
-                            ipsum, itaque, qui veritatis eligendi deleniti tenetur distinctio ?</p>
+                        <!-- Footer Column - Usefull Links -->
 
-                    </div>
-
-                    <!-- Footer Column - Menu -->
-
-                    <div class="col-lg-3 footer_col">
-                        <div class="footer_column_title">Menu</div>
-                        <div class="footer_column_content">
-                            <ul>
-                                <li class="footer_list_item"><a href="#">Home</a></li>
-                                <li class="footer_list_item"><a href="#courses">Courses</a></li>
-                                <li class="footer_list_item"><a href="#about">About Us</a></li>
-                                <li class="footer_list_item"><a href="#contact">Contact</a></li>
-                            </ul>
+                        <div class="col-lg-3 footer_col">
+                            <div class="footer_column_title">Usefull Links</div>
+                            <div class="footer_column_content">
+                                <ul>
+                                    <li class="footer_list_item"><a href="#">Testimonials</a></li>
+                                    <li class="footer_list_item"><a href="#">FAQ</a></li>
+                                    <li class="footer_list_item"><a href="#">Community</a></li>
+                                    <li class="footer_list_item"><a href="#">Campus
+                                            Pictures</a></li>
+                                    <li class="footer_list_item"><a href="#">Tuitions</a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Footer Column - Usefull Links -->
+                        <!-- Footer Column - Contact -->
 
-                    <div class="col-lg-3 footer_col">
-                        <div class="footer_column_title">Usefull Links</div>
-                        <div class="footer_column_content">
-                            <ul>
-                                <li class="footer_list_item"><a href="#">Testimonials</a></li>
-                                <li class="footer_list_item"><a href="#">FAQ</a></li>
-                                <li class="footer_list_item"><a href="#">Community</a></li>
-                                <li class="footer_list_item"><a href="#">Campus Pictures</a></li>
-                                <li class="footer_list_item"><a href="#">Tuitions</a></li>
-                            </ul>
+                        <div class="col-lg-3 footer_col">
+                            <div class="footer_column_title">Contact</div>
+                            <div class="footer_column_content">
+                                <ul>
+                                    <li class="footer_contact_item">
+                                        <div class="footer_contact_icon">
+                                            <img
+                                                src="../assets/img/placeholder.svg"
+                                                alt="https://www.flaticon.com/authors/lucy-g">
+                                        </div>
+                                        118 Le Minh Xuan, Tan Binh HCMC
+                                    </li>
+                                    <li class="footer_contact_item">
+                                        <div class="footer_contact_icon">
+                                            <img
+                                                src="../assets/img/smartphone.svg"
+                                                alt="https://www.flaticon.com/authors/lucy-g">
+                                        </div>
+                                        03 666 18 162
+                                    </li>
+                                    <li class="footer_contact_item">
+                                        <div class="footer_contact_icon">
+                                            <img
+                                                src="../assets/img/envelope.svg"
+                                                alt="https://www.flaticon.com/authors/lucy-g">
+                                        </div>tunganhnguyen2502@gmail.com
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+
                     </div>
-
-                    <!-- Footer Column - Contact -->
-
-                    <div class="col-lg-3 footer_col">
-                        <div class="footer_column_title">Contact</div>
-                        <div class="footer_column_content">
-                            <ul>
-                                <li class="footer_contact_item">
-                                    <div class="footer_contact_icon">
-                                        <img src="../assets/img/placeholder.svg"
-                                            alt="https://www.flaticon.com/authors/lucy-g">
-                                    </div>
-                                    118 Le Minh Xuan, Tan Binh HCMC
-                                </li>
-                                <li class="footer_contact_item">
-                                    <div class="footer_contact_icon">
-                                        <img src="../assets/img/smartphone.svg"
-                                            alt="https://www.flaticon.com/authors/lucy-g">
-                                    </div>
-                                    03 666 18 162
-                                </li>
-                                <li class="footer_contact_item">
-                                    <div class="footer_contact_icon">
-                                        <img src="../assets/img/envelope.svg"
-                                            alt="https://www.flaticon.com/authors/lucy-g">
-                                    </div>tunganhnguyen2502@gmail.com
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
 
-            <!-- Footer Copyright -->
+                <!-- Footer Copyright -->
 
-            <div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
-                <div class="footer_copyright">
-                    <span>
-                        Copyright &copy;<script>
+                <div class="footer_bar d-flex flex-column flex-sm-row
+                    align-items-center">
+                    <div class="footer_copyright">
+                        <span>
+                            Copyright &copy;<script>
                             document.write(new Date().getFullYear());
-                        </script> All rights reserved | This template is made with &nbsp; <i class="fa fa-heart"
-                            aria-hidden="true"></i> &nbsp; by <a href="https://tunganh252.github.io/"
-                            target="_blank">nt.anh252</a>
-                    </span>
+                        </script>
+                            All rights reserved | This template is made with
+                            &nbsp; <i class="fa fa-heart" aria-hidden="true"></i>
+                            &nbsp; by <a
+                                href="https://tunganh252.github.io/"
+                                target="_blank">nt.anh252</a>
+                        </span>
+                    </div>
+                    <div class="footer_social ml-sm-auto d-flex
+                        align-items-center">
+                        <ul class="menu_social mb-0">
+                            <li class="menu_social_item"><a href="#"><i
+                                        class="fab fa-pinterest"></i></a></li>
+                            <li class="menu_social_item"><a href="#"><i
+                                        class="fab fa-linkedin-in"></i></a></li>
+                            <li class="menu_social_item"><a href="#"><i
+                                        class="fab fa-instagram"></i></a></li>
+                            <li class="menu_social_item"><a href="#"><i
+                                        class="fab fa-facebook-f"></i></a></li>
+                            <li class="menu_social_item"><a href="#"><i
+                                        class="fab fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer_social ml-sm-auto d-flex align-items-center">
-                    <ul class="menu_social mb-0">
-                        <li class="menu_social_item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                        <li class="menu_social_item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li class="menu_social_item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li class="menu_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="menu_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    </ul>
+
+            </div>
+        </footer>
+
+
+
+
+
+
+        <!-- ========================= -->
+        <!-- Modal -->
+        <!-- ========================= -->
+
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal_form">
+            <!-- Modal content -->
+
+            <div class="container_modal">
+                <div class="message">
+                    <div class="btn-wrapper">
+                        <button class="button" id="signup">SignUp</button>
+                        <button class="button" id="login2"> Login</button>
+                    </div>
                 </div>
+
+                <div class="form form--signup">
+                    <div class="form--heading">Welcome!</div>
+                    <form class="form_setting" autocomplete="off">
+                        <input id="taiKhoanDK" type="text" placeholder="Tài khoản">
+                        <span class="divErrorTaiKhoan"></span>
+                        <input id="matKhauDK" type="password" placeholder="Mật khẩu">
+                        <span class="divErrorMatKhau"></span>
+                        <input id="hoTenDK" type="text" placeholder="Họ tên">
+                        <span class="divErrorHoTen"></span>
+                        <input id="emailDK" type="email" placeholder="Email">
+                        <span class="divErrorEmail"></span>
+                        <input id="sodtDK" type="number" placeholder="Số điện thoại">
+                        <span class="divErrorSDT"></span>
+                        <label>Loại người dùng</label>
+                        <select class="form-control" id="dkLoaiNguoiDung">
+                            <option value="HV">Học viên</option>
+                            <option value="GV">Giảng viên</option>
+                        </select>
+                        <button type="button" id="btnDangKy" class="button
+                            my-3">Sign Up</button>
+                    </form>
+                </div>
+
+                <div class="form form--login">
+                    <div class="form--heading">Welcome back! </div>
+                    <form class="form_setting" autocomplete="off">
+                        <input id="taiKhoanDN" type="text" placeholder="Tài khoản">
+                        <input id="matKhauDN" type="password" placeholder="Mật khẩu">
+                        <button id="btnDangNhap" type="button" class="button
+                            mt-3">Login</button>
+                    </form>
+                </div>
+                <span class="close">&times;</span>
             </div>
 
         </div>
-    </footer>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../../node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="../../node_modules/popper.js/dist/popper.min.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- AOS animate -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
+
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../../node_modules/popper.js/dist/popper.min.js"></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- AOS animate -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
         AOS.init();
     </script>
 
 
-    <!-- ///// -->
-    <script src="../../dist/js/index.js"></script>
-</body>
+        <!-- ///// -->
+        <script src="../../dist/js/index.js"></script>
+    </body>
 
 </html>
